@@ -1,33 +1,39 @@
-.kanbanBody{
+.kanbanBody {
     background-color: #f4f6fa;
     min-height: 100vh;
+    padding: 1rem; /* Add padding for smaller screens */
 }
-.column{
+
+.column {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     flex-wrap: wrap;
+    flex-direction: row;
 }
-.member{
+
+.member {
     display: flex;
     gap: 2rem;
     flex-direction: column;
 }
 
-
-.columnHead
-{
-   display: flex;
-   padding-top: 80px;
-   justify-content: space-between;
+.columnHead {
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
-.columnHeadRight{
+.columnHeadRight {
     margin-top: 22px;
 }
-.columnHeadLeft{
+
+.columnHeadLeft {
     display: flex;
+    flex-wrap: wrap;
 }
-.heading{
+
+.heading {
     font-size: 20px;
     font-weight: 400;
     margin-top: 15px;
@@ -38,9 +44,60 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    margin-top:15px;
+    margin-top: 15px;
     padding: 2px 5px;
-  }
+}
+
 .columnHeadLeft p {
     padding: 2px 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Tablet view */
+    .column {
+        flex-direction: column;
+        align-items: center;
+    }
+    .columnHead {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+    }
+    .heading {
+        font-size: 18px;
+        text-align: center;
+    }
+    .columnHeadLeft,
+    .columnHeadRight {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile view */
+    .column {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%; /* Full width for smaller screens */
+    }
+    .columnHead {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+    }
+    .heading {
+        font-size: 16px;
+        text-align: center;
+    }
+    .avatar {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+    .columnHeadLeft,
+    .columnHeadRight {
+        margin-top: 5px;
+        text-align: center;
+    }
 }
