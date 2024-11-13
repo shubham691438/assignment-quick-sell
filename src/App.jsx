@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Navbar'
-import Body from './Body'
+import Body from './components/Body'
 
 function App() {
   const [error, setError] = useState(false)
