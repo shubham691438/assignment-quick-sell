@@ -1,3 +1,7 @@
+.kanbanBody{
+    background-color: #f4f6fa;
+    min-height: 100vh;
+}
 .column{
     display: flex;
     gap:1rem

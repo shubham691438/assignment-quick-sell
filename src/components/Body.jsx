@@ -5,7 +5,7 @@ import '../App.css'
 
 function Body({ FinalData }) {
     return (
-        <div>
+        <div className='kanbanBody'>
             <div className='column'>
                 {
                     Object.keys(FinalData).map((key) => (
