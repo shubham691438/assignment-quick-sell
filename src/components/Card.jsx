@@ -12,7 +12,7 @@ const Card = ({ id, title, tags, userImageSrc,GroupingType,cardIcon,cardIcon2 })
         {GroupingType != "User" && <img className='cardAvatar' src={userImageSrc}/>}
       </div>
       <div style={styles.cardTitle}>
-        {GroupingType != "Status" &&<img src={cardIcon2}/> }
+        {GroupingType != "Status" &&<img src={cardIcon2} style={{marginRight:"5px"}}/> }
        {title}</div>
       <div style={styles.cardFooter}>
         {GroupingType != "Priority" &&<div style={styles.icon}><img src={cardIcon}/></div>}
