@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../Card'
-import Groups from '../Groups'
+import Card from './Card'
+import Groups from './Groups'
 import '../App.css'
 
 function Body({ FinalData }) {

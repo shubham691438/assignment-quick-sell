@@ -1,20 +1,20 @@
 import React,{useState,useEffect} from 'react';
-import './App.css';
+import '../App.css';
 import Card from './Card';
-import ThreeDotMenuIcon from './assets/threeDotMenu.svg';
-import AddIcon from './assets/add.svg';
-import AvatarIcon from './assets/img_avatar.png';
+import ThreeDotMenuIcon from '../assets/threeDotMenu.svg';
+import AddIcon from '../assets/add.svg';
+import AvatarIcon from '../assets/img_avatar.png';
 
-import DoneIcon from './assets/Done.svg';
-import InProgressIcon from './assets/in-progress.svg';
-import CancelledIcon from './assets/Cancelled.svg';
-import BackLogIcon from './assets/Backlog.svg';
-import Todo from './assets/To-do.svg';
-import HighPriorityIcon from './assets/HighPriority.svg';
-import MediumPriorityIcon from './assets/MediumPriority.svg';
-import LowPriorityIcon from './assets/LowPriority.svg';
-import NoPriorityIcon from './assets/No-priority.svg';
-import UrgentIcon from './assets/urgentPriority.svg';
+import DoneIcon from '../assets/Done.svg';
+import InProgressIcon from '../assets/in-progress.svg';
+import CancelledIcon from '../assets/Cancelled.svg';
+import BackLogIcon from '../assets/Backlog.svg';
+import Todo from '../assets/To-do.svg';
+import HighPriorityIcon from '../assets/HighPriority.svg';
+import MediumPriorityIcon from '../assets/MediumPriority.svg';
+import LowPriorityIcon from '../assets/LowPriority.svg';
+import NoPriorityIcon from '../assets/No-priority.svg';
+import UrgentIcon from '../assets/urgentPriority.svg';
 
 
 function Groups({ ele, heading }) {

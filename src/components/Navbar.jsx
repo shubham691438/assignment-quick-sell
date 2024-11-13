@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Navbar.css';
-import DisplayIcon from './assets/display.svg';
-import downIcon from './assets/down.svg';
+import '../Navbar.css';
+import DisplayIcon from '../assets/display.svg';
+import downIcon from '../assets/down.svg';
 
 function Navbar({ Grouping, Ordering, SetGrouping, SetOrdering }) {
   const [showModal, setShowModal] = useState(false);

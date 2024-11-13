@@ -36,7 +36,7 @@ const styles = {
     marginBottom: '4px',
   },
   cardTitle: {
-    fontSize: '18px',
+    fontSize: '14px',
     fontWeight: '500',
     color: '#333',
     marginBottom: '8px',
