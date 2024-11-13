@@ -72,7 +72,9 @@
   color: black;
   font: bold;
 }
-
+#displayIcon{
+  margin-right: 5px;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
