@@ -1,0 +1,12 @@
+.column{
+    display: flex;
+    gap:1rem
+}
+.member{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.pad{
+    padding-top: 60px;
+}
