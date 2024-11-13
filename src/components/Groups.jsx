@@ -10,6 +10,7 @@ import InProgressIcon from '../assets/in-progress.svg';
 import CancelledIcon from '../assets/Cancelled.svg';
 import BackLogIcon from '../assets/Backlog.svg';
 import Todo from '../assets/To-do.svg';
+
 import HighPriorityIcon from '../assets/HighPriority.svg';
 import MediumPriorityIcon from '../assets/MediumPriority.svg';
 import LowPriorityIcon from '../assets/LowPriority.svg';
@@ -17,11 +18,12 @@ import NoPriorityIcon from '../assets/No-priority.svg';
 import UrgentIcon from '../assets/urgentPriority.svg';
 
 
+
 function Groups({ ele, heading ,GroupingType}) {
 
     const [image, setImage] = useState(AvatarIcon);
 
-    if (heading === "Priority 4") {
+    if (heading === "Priority 4") { 
         heading = "Urgent";
     } else if (heading === "Priority 3") {
         heading = "High";
@@ -32,8 +34,49 @@ function Groups({ ele, heading ,GroupingType}) {
     } else if (heading === "Priority 0")
         heading = "No priority";
     console.log(heading)
-
     
+
+    function getIcon(card) {
+        if(GroupingType === "User" || GroupingType === "Status"){
+            if(card.priority === 4){
+                return UrgentIcon;
+            }
+            else if(card.priority === 3){
+                return HighPriorityIcon;
+            }
+            else if(card.priority === 2){
+                return MediumPriorityIcon;
+            }
+            else if(card.priority === 1){
+                return LowPriorityIcon;
+            }
+            else if(card.priority === 0){
+                return NoPriorityIcon;
+            }
+        } 
+      
+    }
+
+    function getIcon2(card) {
+       if(GroupingType === "Priority" || GroupingType=="User"){
+            if(card.status === "Done"){
+                return DoneIcon;
+            }
+            else if(card.status === "In progress" || card.status === "In Progress" || card.status === "in progress"){
+                return InProgressIcon;
+            }
+            else if(card.status === "Cancelled" || card.status === "cancelled"){
+                return CancelledIcon;
+            }
+            else if(card.status === "Backlog"){
+                return BackLogIcon;
+            }
+            else if(card.status === "Todo" || card.status === "To-do" || card.status === "todo"){
+                return Todo;
+            }
+        }
+    }
+
 
     useEffect(() => {
         if(heading === "Done"){
@@ -93,6 +136,9 @@ function Groups({ ele, heading ,GroupingType}) {
                         tags={card.tag}
                         GroupingType={GroupingType}
                         userImageSrc={AvatarIcon}
+                        cardIcon2={getIcon2(card)}
+                        cardIcon={getIcon(card)}
+
                     />
                 ))}
             </div>
@@ -100,4 +146,4 @@ function Groups({ ele, heading ,GroupingType}) {
     );
 }
 
-export default Groups;
+export default Groups

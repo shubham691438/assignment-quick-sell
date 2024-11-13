@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './card.css'
 
-const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
+const Card = ({ id, title, tags, userImageSrc,GroupingType,cardIcon,cardIcon2 }) => {
+
   return (
     <div style={styles.card}>
       <div style={styles.cardHeader}>
@@ -10,9 +11,11 @@ const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
         </div>
         {GroupingType != "User" && <img className='cardAvatar' src={userImageSrc}/>}
       </div>
-      <div style={styles.cardTitle}>{title}</div>
+      <div style={styles.cardTitle}>
+        {GroupingType != "Status" &&<img src={cardIcon2}/> }
+       {title}</div>
       <div style={styles.cardFooter}>
-        <div style={styles.icon}>!</div>
+        {GroupingType != "Priority" &&<div style={styles.icon}><img src={cardIcon}/></div>}
         {tags.map((tag, index) => (
           <span key={index} style={styles.tag}>
             {tag}
@@ -58,8 +61,8 @@ const styles = {
     display: 'inline-flex',
     width: '24px',
     height: '24px',
-    backgroundColor: '#e0e0e0',
-    borderRadius: '50%',
+    // backgroundColor: '#e0e0e0',
+    // borderRadius: '50%',
     justifyContent: 'center',
     alignItems: 'center',
     color: '#757575',
