@@ -7,7 +7,7 @@
 .column {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+   
     flex-direction: row;
 }
 
@@ -21,7 +21,7 @@
     display: flex;
     padding-top: 80px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
+    
 }
 
 .columnHeadRight {
@@ -30,7 +30,7 @@
 
 .columnHeadLeft {
     display: flex;
-    flex-wrap: wrap;
+    
 }
 
 .heading {
