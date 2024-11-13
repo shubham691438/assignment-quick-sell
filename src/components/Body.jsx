@@ -3,13 +3,13 @@ import Card from './Card'
 import Groups from './Groups'
 import '../App.css'
 
-function Body({ FinalData }) {
+function Body({ FinalData,GroupingType }) {
     return (
         <div className='kanbanBody'>
             <div className='column'>
                 {
                     Object.keys(FinalData).map((key) => (
-                        <Groups key={key} ele={FinalData[key]} heading={key} />
+                        <Groups key={key} ele={FinalData[key]} heading={key}  GroupingType={GroupingType} />
                     ))
                 }
 

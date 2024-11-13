@@ -17,7 +17,7 @@ import NoPriorityIcon from '../assets/No-priority.svg';
 import UrgentIcon from '../assets/urgentPriority.svg';
 
 
-function Groups({ ele, heading }) {
+function Groups({ ele, heading ,GroupingType}) {
 
     const [image, setImage] = useState(AvatarIcon);
 
@@ -91,6 +91,7 @@ function Groups({ ele, heading }) {
                         id={card.id}
                         title={card.title}
                         tags={card.tag}
+                        GroupingType={GroupingType}
                     />
                 ))}
             </div>

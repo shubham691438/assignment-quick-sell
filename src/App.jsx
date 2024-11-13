@@ -62,14 +62,14 @@ function App() {
 
 
   useEffect(() => {
-    // Function to group data based on the current Grouping criteria
+  
     const groupData = () => {
       if (!upDatedData)
         return
       const grouped = upDatedData.reduce((acc, item) => {
         let key;
 
-        // Determine the key based on Grouping criteria
+  
         if (Grouping === 'User') {
           key = item.userDetails.name;
         } else if (Grouping === 'Priority') {
@@ -82,14 +82,14 @@ function App() {
           acc[key] = [];
         }
 
-        // Add the item to the corresponding group
+      
         acc[key].push(item);
 
         return acc;
       }, {});
       const sorted = sortGroupedData(grouped)
       setGroupedData(sorted);
-      // console.log(sorted)
+      
     };
 
     groupData();
@@ -97,7 +97,7 @@ function App() {
   return (
     <div style={{ overflow: 'hidden' }}>
       <Navbar SetGrouping={setGrouping} SetOrdering={setOrdering} Grouping={Grouping} Ordering={Ordering} />
-      <Body FinalData={groupData} />
+      <Body FinalData={groupData} GroupingType={Grouping}/>
     </div>
   )
 }

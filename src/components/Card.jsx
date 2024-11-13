@@ -1,9 +1,16 @@
 import React from 'react';
+import AvatarIcon from '../assets/img_avatar.png'
+import './card.css'
 
-const Card = ({ id, title, tags, userImageSrc }) => {
+const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
   return (
     <div style={styles.card}>
-      <div style={styles.cardHeader}>{id}</div>
+      <div style={styles.cardHeader}>
+        <div>
+          {id}
+        </div>
+        {GroupingType != "User" && <img className='cardAvatar' src={AvatarIcon}/>}
+      </div>
       <div style={styles.cardTitle}>{title}</div>
       <div style={styles.cardFooter}>
         <div style={styles.icon}>!</div>
@@ -34,6 +41,8 @@ const styles = {
     fontSize: '14px',
     color: '#757575',
     marginBottom: '4px',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   cardTitle: {
     fontSize: '14px',
