@@ -1,5 +1,4 @@
 import React from 'react';
-import AvatarIcon from '../assets/img_avatar.png'
 import './card.css'
 
 const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
@@ -9,7 +8,7 @@ const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
         <div>
           {id}
         </div>
-        {GroupingType != "User" && <img className='cardAvatar' src={AvatarIcon}/>}
+        {GroupingType != "User" && <img className='cardAvatar' src={userImageSrc}/>}
       </div>
       <div style={styles.cardTitle}>{title}</div>
       <div style={styles.cardFooter}>
@@ -20,7 +19,6 @@ const Card = ({ id, title, tags, userImageSrc,GroupingType }) => {
           </span>
         ))}
       </div>
-      {userImageSrc && <img src={userImageSrc} alt="User" style={styles.userImage} />}
     </div>
   );
 };
@@ -70,11 +68,13 @@ const styles = {
   tag: {
     display: 'inline-block',
     padding: '4px 8px',
-    borderRadius: '12px',
-    backgroundColor: '#f0f0f0',
+    borderRadius: '4px',
+    backgroundColor: '',
     fontSize: '12px',
     color: '#757575',
     marginRight: '4px',
+    border: '1px solid #e0e0e0',
+    fontWeight: '500',
   },
   userImage: {
     width: '32px',

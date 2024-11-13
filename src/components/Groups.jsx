@@ -92,6 +92,7 @@ function Groups({ ele, heading ,GroupingType}) {
                         title={card.title}
                         tags={card.tag}
                         GroupingType={GroupingType}
+                        userImageSrc={AvatarIcon}
                     />
                 ))}
             </div>
