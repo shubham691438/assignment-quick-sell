@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../Navbar.css';
-import DisplayIcon from '../assets/display.svg';
+import DisplayIcon from '../assets/Display.svg';
 import downIcon from '../assets/down.svg';
 
 function Navbar({ Grouping, Ordering, SetGrouping, SetOrdering }) {
